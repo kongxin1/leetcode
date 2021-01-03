@@ -1,4 +1,4 @@
-package Solution;
+package addTwoNumbers;
 
 import java.util.Scanner;
 

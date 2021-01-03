@@ -1,4 +1,4 @@
-package Solution;
+package removeNthFromEnd;
 
 public class ListNode {
      int val;
