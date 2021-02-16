@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * 144. 二叉树的前序遍历
+ * 给你二叉树的根节点 root ，返回它节点值的 前序 遍历。
+ * 执行结果：通过
+ * 显示详情 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
+ * 内存消耗：36.4 MB, 在所有 Java 提交中击败了97.08%的用户
+ * 提供了递归遍历版本和非递归遍历版本
+ */
 public class PreorderTraversal {
     public static void main(String[] args)throws Exception {
         PreorderTraversal code=new PreorderTraversal();
