@@ -7,29 +7,28 @@ public class GroupAnagrams {
         rotate.groupAnagrams(m);
     }
     public List<List<String>> groupAnagrams(String[] strs) {
-        Map<List<Integer>,List<String>> map=new HashMap<>();
+        Map<String,List<String>> map=new HashMap<>();
         for(String s:strs){
             int t=0;
-            List<Integer> list=new ArrayList<>(26);
+            StringBuilder sb=new StringBuilder();
             int[] cnt=new int[26];
             for(int i=0;i<s.length();i++){
                 int c=s.charAt(i)-'a';
                 cnt[c]++;
             }
-            for(int i:cnt){
-                list.add(i);
+            for(int i=0;i<26;i++){
+                if(cnt[i]!=0){
+                    sb.append(i+'a').append(cnt[i]);
+                }
             }
-            List<String> l=map.get(list);
+            String st=sb.toString();
+            List<String> l=map.get(st);
             if(l==null){
                 l=new ArrayList<>();
             }
             l.add(s);
-            map.put(list,l);
+            map.put(st,l);
         }
-        List<List<String>> res=new ArrayList<>();
-        for(List<String> l:map.values()){
-            res.add(l);
-        }
-        return res;
+        return new ArrayList<>(map.values());
     }
 }
