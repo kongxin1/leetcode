@@ -7,18 +7,19 @@ public class MyPow {
         if(n==0||Math.abs(x-1.0d)<=0.00000001d){
             return 1.0d;
         }
-        boolean negative=false,one=false;
+        boolean negative=false;
+        double res=1.0;
         if(n==-2147483648){
             n=-2147483647;
-            one=true;
+            res=x;
         }
         if(n<0){
             n=-n;
             negative=true;
         }
-        double res=1.0;
+
         if((n&1)==1){
-            res=x;
+            res*=x;
             n--;
         }
         double mid=x;
@@ -28,9 +29,6 @@ public class MyPow {
             if ((n & 1) == 1) {
                 res *= mid;
             }
-        }
-        if(one){
-            res*=x;
         }
         if(negative){
             return 1.0d/res;
