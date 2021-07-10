@@ -21,7 +21,7 @@ public class GrayCode {
         while(i<max){
             int t=i;
             for(int l=i-1;l>=0;l--) {
-               r[i]=( t | r[l]);
+               r[i]= t | r[l];
                i++;
             }
         }
