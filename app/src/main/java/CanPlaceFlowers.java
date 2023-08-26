@@ -14,8 +14,11 @@ public class CanPlaceFlowers {
             if(flowerbed[i]!=1){
                 if((i==0||flowerbed[i-1]==0)&&(i==flowerbed.length-1||flowerbed[i+1]==0)){
                     flowerbed[i]=1;
+                    i++;
                     n--;
                 }
+            }else{
+                i++;
             }
 
         }
